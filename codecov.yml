@@ -3,4 +3,4 @@ coverage:
     project:
       default:
         target: 100%
-        threshold: 50%
+        threshold: 1%
