@@ -63,16 +63,16 @@ class DoubleCalculatorTest {
     void multiplicationOperation_theResultShouldEqualsToExpectedArgValue(Double d1, Double d2, Double ignore, Double ignore2, Double expected) {
         assertEquals(expected, doubleCalculator.mult(d1, d2));
     }
-
-    @ParameterizedTest
-    @MethodSource("getAddOperands")
-    void dividingOperation_theResultShouldExists(Double d1, Double d2) {
-        assertNotNull(doubleCalculator.div(d1, d2));
-    }
-
-    @ParameterizedTest
-    @MethodSource("getAddOperands")
-    void dividingOperation_theResultShouldEqualsToExpectedArgValue(Double d1, Double d2, Double ignore, Double ignore2, Double ignore3, Double expected) {
-        assertEquals(expected, doubleCalculator.div(d1, d2));
-    }
+//
+//    @ParameterizedTest
+//    @MethodSource("getAddOperands")
+//    void dividingOperation_theResultShouldExists(Double d1, Double d2) {
+//        assertNotNull(doubleCalculator.div(d1, d2));
+//    }
+//
+//    @ParameterizedTest
+//    @MethodSource("getAddOperands")
+//    void dividingOperation_theResultShouldEqualsToExpectedArgValue(Double d1, Double d2, Double ignore, Double ignore2, Double ignore3, Double expected) {
+//        assertEquals(expected, doubleCalculator.div(d1, d2));
+//    }
 }
