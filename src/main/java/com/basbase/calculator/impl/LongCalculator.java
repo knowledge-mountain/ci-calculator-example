@@ -1,22 +1,36 @@
-package com.basbase.calculator;
+package com.basbase.calculator.impl;
 
-import com.basbase.calculator.op.Operation;
-
-import java.util.HashMap;
-import java.util.Map;
+import static com.basbase.calculator.impl.OperationName.ADD;
+import static com.basbase.calculator.impl.OperationName.DIV;
+import static com.basbase.calculator.impl.OperationName.MULT;
+import static com.basbase.calculator.impl.OperationName.SUB;
 
 /**
  * @author Viktor Basanets
  * @Project: ci-calculator-example
  */
-public class LongCalculator<N> {
-    private Map<Class<N>, Operation> operations;
-
+public class LongCalculator extends BaseCalculator<Long> {
     public LongCalculator() {
-        operations = new HashMap<>();
+        super(Long::sum, (l1, l2) -> l1 - l2, (l1, l2) -> l1 * l2, (l1, l2) -> l1 / l2);
     }
 
-    public N calculate(Operation op, N n1, N n2) {
+    @Override
+    public Long add(Long n1, Long n2) {
+        return calculate(ADD, n1, n2);
+    }
 
+    @Override
+    public Long sub(Long n1, Long n2) {
+        return calculate(SUB, n1, n2);
+    }
+
+    @Override
+    public Long mult(Long n1, Long n2) {
+        return calculate(MULT, n1, n2);
+    }
+
+    @Override
+    public Long div(Long n1, Long n2) {
+        return calculate(DIV, n1, n2);
     }
 }
